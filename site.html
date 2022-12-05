@@ -14,8 +14,6 @@
             <div class="form">
             <label for="playerInput">Example player input:</label>
             <input type = "text" id = "playerInput" class = "playerInput">
-	        <input type = "submit" value = "Submit player input"
-		    class = "playerInputSubmit" id = "submitplayerinput">
             </div>
         </div>
 
@@ -25,7 +23,8 @@
 	        <input type = "submit" value = "Submit guess"
 		    class = "guessSubmit" id = "submitguess">
         </div>
-        <p>This v0.0.0.1 of a future project.</p>
+        <p>This v0.0.0.2 of a future project.</p>
+        <p>earlier versions can be viewed in github.</p>
         <p>man i'm sorry about the ugly color I know I don't know a good color palette, i'll change it later.</p>
     </div>
         <script type = "text/javascript">
@@ -36,10 +35,22 @@
                 {	
                      alert("You got it right it was " + x + " yay. ");
                 }
-                else /* if you guessed the player input wrong.*/
+                else
                 {	
-                    alert("Oops the answer was not " + x + " dummy. It was " + y + "." );
+                    var myArray = [
+                        "Nope.",
+                        "You thought it was that?",
+                        "No, wrong, your stupid.",
+                        "No.",
+                        "Please, consider the following. Wrong answer.",
+                        "I think you got it wrong.",
+                        "We don't like wrong answers."
+                    ];
+                    var n = myArray[Math.floor(Math.random()*myArray.length)];
+
+                    alert("" + n + "");
                 }
+
             }
         </script>
     </body>
