@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <title>W.Y.A.T.T</title>
+    </head>
+    <body>
+        <div>
+        <h1>W.Y.A.T.T</h1>
+        <h3>what ya aerospace that there</h3>
+        <p>(the title is a work in progress)</p>
+        <div class="player">
+            <div class="form">
+            <label for="playerInput">Example player input:</label>
+            <input type = "text" id = "playerInput" class = "playerInput">
+	        <input type = "submit" value = "Submit player input"
+		    class = "playerInputSubmit" id = "submitplayerinput">
+            </div>
+        </div>
+
+        <div class="form">
+            <label for="guessField">Enter your guess:</label>
+            <input type = "text" id = "guessField" class = "guessField">
+	        <input type = "submit" value = "Submit guess"
+		    class = "guessSubmit" id = "submitguess">
+        </div>
+        <p>This v0.0.0.1 of a future project.</p>
+        <p>man i'm sorry about the ugly color I know I don't know a good color palette, i'll change it later.</p>
+    </div>
+        <script type = "text/javascript">
+            document.getElementById("submitguess").onclick = function(){
+                var x = document.getElementById("guessField").value;
+                var y = document.getElementById("playerInput").value;
+                if(x == y)
+                {	
+                     alert("You got it right it was " + x + " yay. ");
+                }
+                else /* if you guessed the player input wrong.*/
+                {	
+                    alert("Oops the answer was not " + x + " dummy. It was " + y + "." );
+                }
+            }
+        </script>
+    </body>
+</html>
